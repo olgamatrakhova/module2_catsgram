@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.model;
+package ru.yandex.practicum.catsgram.exception;
 
 public class InvalidEmailException extends RuntimeException {
     public InvalidEmailException(String message) {

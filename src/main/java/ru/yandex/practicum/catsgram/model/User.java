@@ -1,40 +1,32 @@
 package ru.yandex.practicum.catsgram.model;
 
-import java.time.LocalDate;
-import java.util.Objects;
-
 public class User {
-    private String email;
+
+    private String id;
+
+    private String username;
+
     private String nickname;
-    private LocalDate birthdate;
 
-    public User(String email, String nickname, LocalDate birthdate) {
-        this.email = email;
+    public User() {
+    }
+
+    public User(String id, String username, String nickname) {
+        this.id = id;
+        this.username = username;
         this.nickname = nickname;
-        this.birthdate = birthdate;
     }
 
-// Конструкторы, геттеры и сеттеры
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(email, user.email);
+    public void setId(String id) {
+        this.id = id;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(email);
+    public String getUsername() {
+        return username;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNickname() {
@@ -45,11 +37,8 @@ public class User {
         this.nickname = nickname;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate;
-    }
+    public String getId() {
+        return id;
+    };
 
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
-    }
 }
